@@ -1,0 +1,76 @@
+package com.yogu.services.order.base.entry;
+
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
+import java.io.Serializable;
+import java.util.Date;
+
+/**
+ * 订单明细表
+ * 
+ */
+public class StorePO implements Serializable {
+	
+	private static final long serialVersionUID = 5234889389388802677L;
+
+	/** 商户idid */
+	private long storeId;
+
+	/** 商户编号 */
+	private String storeNo;
+	
+	/** 商户名称 */
+	private String storeName;
+
+	/** 商户预留手机 */
+	private int storeMobile;
+
+	/** 创建时间 */
+	private Date createTime;
+	
+	public long getStoreId() {
+		return storeId;
+	}
+
+	public void setStoreId(long storeId) {
+		this.storeId = storeId;
+	}
+
+	public String getStoreNo() {
+		return storeNo;
+	}
+
+	public void setStoreNo(String storeNo) {
+		this.storeNo = storeNo;
+	}
+
+	public String getStoreName() {
+		return storeName;
+	}
+
+	public void setStoreName(String storeName) {
+		this.storeName = storeName;
+	}
+
+	public int getStoreMobile() {
+		return storeMobile;
+	}
+
+	public void setStoreMobile(int storeMobile) {
+		this.storeMobile = storeMobile;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+	
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
+	}
+
+}
