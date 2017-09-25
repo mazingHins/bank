@@ -18,7 +18,7 @@ public class StoreVO {
 	private String storeName;
 
 	/** 商户预留手机 */
-	private int storeMobile;
+	private String storeMobile;
 
 	public long getStoreId() {
 		return storeId;
@@ -44,11 +44,11 @@ public class StoreVO {
 		this.storeName = storeName;
 	}
 
-	public int getStoreMobile() {
+	public String getStoreMobile() {
 		return storeMobile;
 	}
 
-	public void setStoreMobile(int storeMobile) {
+	public void setStoreMobile(String storeMobile) {
 		this.storeMobile = storeMobile;
 	}
 	
