@@ -1,5 +1,8 @@
 package com.yogu.services.order.resource.base;
 
+import java.util.Arrays;
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.inject.Singleton;
@@ -37,18 +40,18 @@ public class StoreResource {
 	 */
 	@GET
 	@Path("v1/get")
-	public RestResult<StoreVO> get(@QueryParam("storeNo") String storeNo) {
+	public RestResult<List<StoreVO>> get(@QueryParam("storeMobile") String storeMobile) {
 		
-		if(StringUtils.isBlank(storeNo)){
+		if(StringUtils.isBlank(storeMobile)){
 			return new RestResult<>(ResultCode.PARAMETER_ERROR, "商户编号不能为空");
 		}
 		
-		Store store = storeService.getByStoreNo(storeNo);
+		Store store = storeService.getByStoreMobile(storeMobile);
 		if(null == store){
 			return new RestResult<>(ResultCode.PARAMETER_ERROR, "商户不存在，请重新确认");
 		}
 		
-		return new RestResult<>(VOUtil.from(store, StoreVO.class));
+		return new RestResult<>(Arrays.asList(VOUtil.from(store, StoreVO.class)));
 	}
 	
 	

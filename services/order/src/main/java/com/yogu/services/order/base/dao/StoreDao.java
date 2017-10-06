@@ -41,6 +41,6 @@ public interface StoreDao {
 	 * 
 	 * @param storeNo - 商户编号
 	 */
-	public StorePO getByStoreNo(@Param("storeNo") String storeNo);
+	public StorePO getByStoreMobile(@Param("storeMobile") String storeMobile);
 
 }

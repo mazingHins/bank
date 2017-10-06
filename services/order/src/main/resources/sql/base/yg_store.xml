@@ -21,8 +21,8 @@
 		SELECT * FROM yg_order.t_store WHERE store_id=#{storeId}
 	</select>
 	
-	<select id="getByStoreNo" parameterType="java.lang.Long" resultType="com.yogu.services.order.base.entry.StorePO">
-		SELECT * FROM yg_order.t_store where store_no=#{storeNo} limit 1
+	<select id="getByStoreMobile" parameterType="java.lang.Long" resultType="com.yogu.services.order.base.entry.StorePO">
+		SELECT * FROM yg_order.t_store where store_mobile=#{storeMobile} limit 1
 	</select>
 	
 	

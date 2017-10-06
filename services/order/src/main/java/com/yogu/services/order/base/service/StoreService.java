@@ -27,7 +27,7 @@ public interface StoreService {
 	 * @param storeNo - 商户编号（必传，不传返回null）
 	 * @return 商户信息，若无，返回null
 	 */
-	public Store getByStoreNo(String storeNo);
+	public Store getByStoreMobile(String storeMobile);
 
 
 }

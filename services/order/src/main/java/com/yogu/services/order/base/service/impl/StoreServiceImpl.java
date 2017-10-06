@@ -50,11 +50,11 @@ public class StoreServiceImpl implements StoreService {
 	}
 
 	@Override
-	public Store getByStoreNo(String storeNo){
-		if(StringUtils.isBlank(storeNo)){
+	public Store getByStoreMobile(String storeMobile){
+		if(StringUtils.isBlank(storeMobile)){
 			return null;
 		}
-		StorePO store = dao.getByStoreNo(storeNo);
+		StorePO store = dao.getByStoreMobile(storeMobile);
 		if(null != store){
 			return po2dto(store);
 		}
